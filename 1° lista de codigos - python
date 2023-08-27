@@ -1,15 +1,15 @@
-## LISTA DE REPOSTAS PYHTON (SEM 10 POR ENQUANTO)            ALUNO: LUAN BRITO SOUSA CALAZANS | BSI 1°SEM | 1° LISTA DE EXERCICIOS 
+## LISTA DE REPOSTAS PYHTON                             FACULDADES IESGO                                           ALUNO: LUAN BRITO SOUSA CALAZANS | BSI 1°SEM | 1° LISTA DE EXERCICIOS 
 
 ##                  LEMBRANDO QUE OS PROBLEMAS DEVEM SER COPIADOS UNICAMENTE E ABERTO EM OUTRO.PY PARA RODAR  
 
-## EXERCICIO NUMERO 1 :
+## EXERCICIO 1 :
 def  troca_vogal():
     palavra = input(" digite a palavra que queira trocar as vogais ") 
     return palavra.replace("a","*").replace("e","*").replace("i","*").replace("o","*").replace("u","*").upper() + f"\n a palavra que você escolheu foi : {palavra}"
     
 print(troca_vogal())
 ##____________________________________________________________________________________________________________________________________________________________________
-## EXERCICIO NUMERO 2 :
+## EXERCICIO 2 :
 
 def contador_caracters():
     palavra_frase = input('digite a palavra / frase. ')
@@ -18,28 +18,28 @@ def contador_caracters():
 
 print(contador_caracters())
 ##____________________________________________________________________________________________________________________________________________________________________
-## EXERCICIO NUMERO 3 :
+## EXERCICIO 3 :
 
 def contador_de_a():
     nome = input('digite seu nome: ')
     return f"A letra 'A' aparece {nome.count('a')+nome.count('A')} vezes."
 print(contador_de_a())
 ##____________________________________________________________________________________________________________________________________________________________________
-##EXERCICIO NUMERO 4 : 
+##EXERCICIO 4 : 
 
 def letra_maisculas():
     nome = input('digite seu nome completo : ')
     return nome.title()
 print(letra_maisculas())
 ##____________________________________________________________________________________________________________________________________________________________________
-##EXERCICIO NUMERO 5 :
+##EXERCICIO 5 :
 
 def letra_minusculas():
     nome = input('digite seu nome completo : ')
     return nome.lower()
 print(letra_minusculas())
 ##____________________________________________________________________________________________________________________________________________________________________
-## EXERCICIO NUMERO 6 :
+## EXERCICIO 6 :
 
 def nomemaiusculo_sobrenomeminusculo():
     nome = input('digite nome e sobrenome : ')  
@@ -49,7 +49,7 @@ def nomemaiusculo_sobrenomeminusculo():
 
 print(nomemaiusculo_sobrenomeminusculo())
 ##____________________________________________________________________________________________________________________________________________________________________
-##EXERCICIO NUMERO 7 :
+##EXERCICIO 7 :
 
 def nome_sobrenome():
     nome_usuario = input("digite seu nome e sobrenome: ")
@@ -111,7 +111,7 @@ else:
     print("Numero de 1 a 6. Porfavor \n :P  Bora sem enrrola!.")
 
 ##____________________________________________________________________________________________________________________________________________________________________
-##EXERCICIO NUMERO 9 : 
+##EXERCICIO  9 : 
 
 def removedor_vogais():
     
@@ -121,4 +121,14 @@ def removedor_vogais():
 print(removedor_vogais())
 
 ##____________________________________________________________________________________________________________________________________________________________________
-##EXERCICIO NUMERO 10 : (AINDA VOU FAZER.)
+##EXERCICIO  10 :
+def contador_texto():
+    texto = input("Digite o texto: no contador de caracters.")
+    return f"A frase possui {len(texto)} caracters."
+
+print(contador_texto())
+
+##____________________________________________________________________________________________________________________________________________________________________
+##DESAFIO:
+
+
