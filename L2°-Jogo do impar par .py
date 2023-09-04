@@ -1,8 +1,5 @@
 import random
 import time
-
-import random
-import time
 opcoes_do_jogo =['impar','par'] 
 
 def jogo_impar_par():
