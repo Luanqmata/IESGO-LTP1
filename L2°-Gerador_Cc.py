@@ -1,6 +1,6 @@
 import random
 import time
-nomes = ['João da Silva','Maria Santos','Carlos Oliveira','Ana Pereira','Luan C.','Paulo Junior','luiz Fernando','Richard Pinto','Daniel Jogadas.','Vitor Ilucido']
+nomes = ['João da Silva Borges ','Maria Santos Teixeira','Carlos Oliveira Fagundes','Ana Pereira Santana','Luan C.','Paulo Junior Guei','luiz Fernando Pereira','Richard Pinto Da Costa','Daniel Paladini AkkI','Vitor Halland After rock]
 bancos = ['Banco-Brasil','ITAÙ','CaiXa','NubanK','Itaú Unibanco','HSBC','Industrial and Commercial Bank of China']
 def gerador_de_bins():
     print('BEM VINDO AO:\n@$%¨¨¨¨ GeRaDoR de Bins ¨¨¨¨¨%$@\n')
