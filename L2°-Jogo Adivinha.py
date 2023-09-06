@@ -19,6 +19,7 @@ while True:
         print('..')
         time.sleep(0.5)
         print('...')
+        time.sleep(0.5)
     elif num1<num2:
         print('Numero da maquina é MENOR.')
         print('.')
@@ -26,3 +27,4 @@ while True:
         print('..')
         time.sleep(0.5)
         print('...')
+        time.sleep(0.5)
