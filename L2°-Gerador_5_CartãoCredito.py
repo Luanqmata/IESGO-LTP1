@@ -160,19 +160,19 @@ def gerador_de_bins():
     
     if user == 'gerarbins':
         print('NOME:',nome,'\n cc1= ',digito,digito1,digito2,digito3,"-",digito4,digito5,digito6,digito7,"-",digito8,digito9,digito10,digito11,"-",digito12,digito13,digito14,digito15)
-        print('##                     PIN: ', n_tras1,n_tras2,n_tras3,'  //BANCO:',banco,'\nAGÊNCIA:',agencia,agencia2,agencia3,agencia4,'\n------------------------------------------------\n')
+        print('##                     CVV: ', n_tras1,n_tras2,n_tras3,'  //BANCO:',banco,'\nAGÊNCIA:',agencia,agencia2,agencia3,agencia4,'\n------------------------------------------------\n')
         time.sleep(1)
         print('NOME:',nome2,'\n cc2= ',digito17,digito18,digito19,digito20,"-",digito21,digito22,digito23,digito24,"-",digito25,digito26,digito27,digito28,"-",digito29,digito30,digito31,digito32)
-        print('##                     PIN: ', n_tras4,n_tras5,n_tras6,'  //BANCO:',banco2,'\nAGÊNCIA:',agencia5,agencia6,agencia7,agencia8,'\n------------------------------------------------\n')
+        print('##                     CVV: ', n_tras4,n_tras5,n_tras6,'  //BANCO:',banco2,'\nAGÊNCIA:',agencia5,agencia6,agencia7,agencia8,'\n------------------------------------------------\n')
         time.sleep(1.5)
         print('NOME:',nome3,'\n cc3= ',digito33,digito34,digito35,digito36,"-",digito37,digito38,digito39,digito40,"-",digito41,digito42,digito43,digito44,"-",digito45,digito46,digito47,digito48)
-        print('##                     PIN: ', n_tras7,n_tras8,n_tras9,'  //BANCO:',banco3,'\nAGÊNCIA:',agencia9,agencia10,agencia11,agencia12,'\n------------------------------------------------\n')
+        print('##                     CVV: ', n_tras7,n_tras8,n_tras9,'  //BANCO:',banco3,'\nAGÊNCIA:',agencia9,agencia10,agencia11,agencia12,'\n------------------------------------------------\n')
         time.sleep(1)
         print('NOME:',nome4,'\n cc4= ',digito49,digito50,digito51,digito52,"-",digito53,digito54,digito55,digito56,"-",digito57,digito58,digito59,digito60,"-",digito61,digito62,digito63,digito64)
-        print('##                     PIN: ', n_tras10,n_tras11,n_tras12,'  //BANCO:',banco4,'\nAGÊNCIA:',agencia13,agencia14,agencia15,agencia16,'\n------------------------------------------------\n')    
+        print('##                     CVV: ', n_tras10,n_tras11,n_tras12,'  //BANCO:',banco4,'\nAGÊNCIA:',agencia13,agencia14,agencia15,agencia16,'\n------------------------------------------------\n')    
         time.sleep(1.5)
         print('NOME:',nome5,'\n cc5= ',digito65,digito66,digito67,digito68,"-",digito69,digito70,digito71,digito72,"-",digito73,digito74,digito75,digito76,"-",digito77,digito78,digito79,digito80)
-        print('##                     PIN: ', n_tras13,n_tras14,n_tras15,'  //BANCO:',banco5,'\nAGÊNCIA:',agencia17,agencia18,agencia19,agencia20,'\n------------------------------------------------\n')
+        print('##                     CVV: ', n_tras13,n_tras14,n_tras15,'  //BANCO:',banco5,'\nAGÊNCIA:',agencia17,agencia18,agencia19,agencia20,'\n------------------------------------------------\n')
     else:
         print("Quer gerar CC e nem sabe digitar 'gerarBINS'.\n :( ") 
     
