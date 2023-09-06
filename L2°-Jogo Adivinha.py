@@ -14,12 +14,14 @@ while True:
         break
     elif num1>num2:
         print("Numero do maquina é MAIOR.")
+        print('.')
         time.sleep(0.5)
         print('..')
         time.sleep(0.5)
         print('...')
     elif num1<num2:
         print('Numero da maquina é MENOR.')
+        print('.')
         time.sleep(0.5)
         print('..')
         time.sleep(0.5)
