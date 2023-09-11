@@ -5,7 +5,7 @@ def questao_um():
     ano= int(input("em qual ano você nasceu? "))
     mes= int(input("qual o mes em que você nasceu? ")) 
     idade = ano_atual - ano
-    signosint = (mes -2) 
+    signosint = (mes -1) 
     resultado = signosstr[signosint]
     return print(f"Idade é: {idade} \n Signo é: {resultado}")
 
