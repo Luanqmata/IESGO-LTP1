@@ -8,7 +8,7 @@ def divisiveis_5():
         conta = contador / 5
         print(contador, '/  5  =', conta)
         print('\nprocessando...\n')
-        time.sleep(1)
+        time.sleep(1) ## ISSO NAO É NESCESSARIO É SO PARA STYLE.
         contador -= 5
         
 divisiveis_5()    
