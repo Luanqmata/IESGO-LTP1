@@ -91,6 +91,17 @@ def numero_primo():
         
 numero_primo()
 
+## 8
+def criacao_login():
+    login = input('insira um loguin: \n')
+    
+    if login != login.lower().strip().rstrip().lstrip():
+        print('O loguin é invalido.')
+    else:
+        print('o loguin é valido.')
+
+print(criacao_login())
+    
 ## 9
 import random
 import time
