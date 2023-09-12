@@ -6,7 +6,7 @@ def soma_numeros():
         if contador % 1==0:
             lista.append(contador)
         contador +=1
-    itens_lista = sum(lista)
-    print('\nA soma dos valores entre 0 e ',numero_user-1,'é igual a:',itens_lista,'\n')
+    soma_lista = sum(lista)
+    print('\nA soma dos valores entre 0 e ',numero_user-1,'é igual a:',soma_lista,'\n')
 
 soma_numeros()
