@@ -46,3 +46,5 @@ if menu_user_dado == 1:
     tabuada_while()
 elif menu_user_dado ==2:
     tabuada_1_10_while()
+else:
+    print('digite somente entre 1 e 2.')
