@@ -9,3 +9,19 @@ input_user = int(input('Digite o numero q queira saber o fatorial.'))
 resultado_final = fatorial(input_user)
 
 print(f'O fatorial do numero {input_user}\nÉ igual a {resultado_final}')
+
+## EM WHILE
+"""
+def fatorial(numero):
+    contador = 1
+    resultado = 1
+    while contador <= numero:
+        resultado *= contador
+        contador +=1
+    return resultado
+        
+
+input_user = int(input("Digite o numero para descobrir o fatorial: "))
+incrementacao = fatorial(input_user)
+
+print(f'O fatorial do numero: {input_user} é igual a: {incrementacao}')
