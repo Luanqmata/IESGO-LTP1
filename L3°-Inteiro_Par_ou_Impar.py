@@ -11,3 +11,14 @@ def par_impar():
         print('o numero deve ser inteiro')
 
 par_impar()
+"""                                    PAR IMPAR NO FOR LOOP
+def par_impar1():
+    numero = int(input('Digite um numero: '))
+    for i in range(1):
+        if numero % 2 == 0:
+            print( 'par')
+        if numero % 2 != 0:
+            print('numero impar.')
+            
+par_impar1()  
+"""
