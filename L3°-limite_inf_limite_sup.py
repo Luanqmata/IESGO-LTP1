@@ -1,5 +1,8 @@
-# Exerício 2 - Escreva um programa que solicita dois números inteirtos (sendo o primeiro o limite inferior e o segundo o limite superior) 
-# e exibe todos os números pares entre esses limites.
+# Exerício 2 - Escreva um programa que solicita dois números inteirtos (sendo o primeiro o limite inferior e o segundo o limite superior)  
+
+# e exibe todos os números pares entre esses limites.                                     ##           https://github.com/Luanqmata/lixo/blob/main/TABUADA_WHILE_FOR.py             (TEORIA)
+
+
 
 print('----------------------------------\nEm for.\n')
 começo = 5
