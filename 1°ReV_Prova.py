@@ -113,21 +113,24 @@ def jogo_adivinha():
     print('pensando.\n')
     time.sleep(1)
     print('pensado...\n')
-    
-    numero_user = int(input('Digite o numero que a Maquina pensou.'))
-    print('analisando...')
-    time.sleep(1)
+    while True:
+        numero_user = int(input('Digite o numero que a Maquina pensou.'))
+        print('analisando...')
+        time.sleep(1)
 
-    if numero_aleatorio == numero_user:
-        print('Você Acertou parabens.')
-    elif numero_user < 0:
-        print('o numero deve ser maior que 0')
-    elif numero_user > 10:
-        print('o numero deve ser menor que 10')
-    else:
-        print('Você errou infelizmente.')
+        if numero_aleatorio == numero_user:
+            print('Você Acertou parabens.')
+            break
+        elif numero_user < 0:
+            print('o numero deve ser maior que 0')
+        elif numero_user > 10:
+            print('o numero deve ser menor que 10')
+        elif numero_aleatorio > numero_user:
+            print('o numero q a maquina pensou é maior.')
+        elif numero_aleatorio < numero_user:
+            print('o numero q a maquina pensou é menor.')
 
-print(jogo_adivinha())
+jogo_adivinha()
 ## 10 
 def contador_de_a():
     frase = input('digite a frase: ')
