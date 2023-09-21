@@ -11,21 +11,24 @@ resultado_final = fatorial(input_user)
 print(f'O fatorial do numero {input_user}\nÉ igual a {resultado_final}')
 ________________________________________________________________________________
 import time
-
+lista = []
 def fatorial_qualqr_numero():
     numero_user = int(input("digite o valor para saber o fatorial dele mesmo: "))
-    
+
     limite = numero_user
     while limite >= 1:
         calculo = limite * numero_user
         print(numero_user,'x', limite ,'=' ,calculo)
         time.sleep(1)
         print('Processando...')
+        lista.append(calculo)
         limite -= 1
+    print(f'O fatorial do {numero_user} é igual a: {sum(lista)}')
     if numero_user < 0:
         print('  ERROR.\n >>>O numero deve ser POSITIVO.<<< \n positivo?')
-    
-print(fatorial_qualqr_numero())
+        
+fatorial_qualqr_numero()
+
 
 ## EM WHILE
 """
