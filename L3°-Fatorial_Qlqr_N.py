@@ -14,9 +14,8 @@ import time
 
 def fatorial_qualqr_numero():
     numero_user = int(input("digite o valor para saber o fatorial dele mesmo: "))
-    contagem = numero_user
-
-    limite = contagem
+    
+    limite = numero_user
     while limite >= 1:
         calculo = limite * numero_user
         print(numero_user,'x', limite ,'=' ,calculo)
