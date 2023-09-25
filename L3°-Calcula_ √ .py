@@ -6,7 +6,7 @@ def calcula_raiz():
         if raiz_quadrada % 1 == 0:
             print(f'O valor escolhido foi: {raiz_asercalculada}.\n E a √ é = {int(raiz_quadrada)}')
         else:
-            print('O numero deve ser um inteiro.')
+            print(f'{raiz_quadrada} Numero quebrado , não possui √ .')
     else:
         print('O numero deve ser positivo.')
         
