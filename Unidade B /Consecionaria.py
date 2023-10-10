@@ -32,11 +32,8 @@ print(nissan.infos())
 
 toyota.compra()
 toyota.ajuste_valor(80)
+print(toyota.infos())
 
 mitsubishi.ajuste_valor(95)
 mitsubishi.compra()
-
-print(toyota.infos())
-
 print(mitsubishi.infos())
-
