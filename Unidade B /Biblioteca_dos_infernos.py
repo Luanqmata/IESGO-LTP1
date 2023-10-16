@@ -197,7 +197,7 @@ def main():
             print('...')
             time.sleep(0.5)
             print('\n\tVOCE SAIU.\n\tADEUS.') 
-        
+            exit()
         else:
             print('escolhe um numero entre 1 e 9.')
             exit()
