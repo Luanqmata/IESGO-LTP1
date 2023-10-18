@@ -1,4 +1,3 @@
-
 class Pedidos:
     def __init__(self,nome_pessoa, hamburger, bebida):
         self.lista_pedidos = []
