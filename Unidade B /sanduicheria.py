@@ -1,15 +1,22 @@
-class Pedidos:
+class Cozinha:
     def __init__(self,nome_pessoa, hamburger, bebida):
-        self.lista_pedidos = []
         self.nome_pessoa = nome_pessoa
         self.hamburger = hamburger
         self.bebida = bebida
-        
+    
+    def __str__(self):
+        return f"\nO pedido de:{self.nome_pessoa}, {self.hamburger} e {self.bebida}.\n" 
+    
+class Pedidos:
+    def __init__(self):
+        self.lista_pedidos = []
+
+    def registrar_pedido(self, pedido):
+        self.lista_pedidos.append(pedido)
         
     def __str__(self):
-        return f"\nO pedido de:{self.nome_pessoa}, {self.hamburger} e {self.bebida}. Total de pedidos: {len(self.lista_pedidos)}\n"
-
-
+        return f"Total de pedidos: {len(self.lista_pedidos)}"
+    
 class Cardapio:
     hamburgeris = [
         "Cachorro Quente",
@@ -55,13 +62,24 @@ class Cardapio:
     
 print('Hamburgueria.')
 
-user_escolha = int(input('Comer aqui: 1, ou delivery: 2\nEscolha: '))
+pedido = Pedidos()
 
-if user_escolha == 1:
-    nome = input('digite seu nome: ')
-    sanduiche_escolha = int(input('Digite o número do Sanduíche: '))
-    bebida_escolha = int(input("Digite o número de escolha da bebida: "))
-    lanche = Cardapio.hamburgeris[sanduiche_escolha - 1]
-    bebida = Cardapio.bebidas[bebida_escolha - 1]
-    pedido = Pedidos(nome,lanche,bebida)
-    print(pedido)
+while True:
+    print("--------------------------------------------------")
+    user_escolha = int(input('Comer aqui: 1\nMostrar N° pedidos: 2\nEscolha: '))
+
+    if user_escolha == 1:
+        nome_cliente = input('Digite seu nome: ')
+        sanduiche_escolha = int(input('Digite o número do Sanduíche: '))
+        bebida_escolha = int(input("Digite o número de escolha da bebida: "))
+        lanche = Cardapio.hamburgeris[sanduiche_escolha - 1]
+        bebida = Cardapio.bebidas[bebida_escolha - 1]
+        pedido_info = Cozinha(nome_cliente, lanche, bebida)
+        pedido.registrar_pedido(pedido_info)
+        print(pedido_info)
+
+    elif user_escolha == 2:
+        print(pedido)
+        
+
+
