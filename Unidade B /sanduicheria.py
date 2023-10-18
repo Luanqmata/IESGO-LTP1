@@ -12,6 +12,7 @@ class Pedidos:
         self.lista_pedidos = []
 
     def registrar_pedido(self, pedido):
+        print('----------Pedido Registrado----------')
         self.lista_pedidos.append(pedido)
         
     def __str__(self):
@@ -60,13 +61,14 @@ class Cardapio:
         "Açaí": 10
     }
     
-print('Hamburgueria.')
 
 pedido = Pedidos()
-
+print("-----------BEM_VINDO_A_AMBURGUERIA-------------")
 while True:
     print("--------------------------------------------------")
-    user_escolha = int(input('Comer aqui: 1\nMostrar N° pedidos: 2\nEscolha: '))
+    print('Registrar Pedido = Digite 1.')
+    print('Ver Qnt° de pedidos = Digite 2.')
+    user_escolha = int(input('\nEscolha: '))
 
     if user_escolha == 1:
         nome_cliente = input('Digite seu nome: ')
