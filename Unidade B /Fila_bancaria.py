@@ -89,3 +89,6 @@ if numero_user_escolha == 2:
 
     print('Proximo cliente.')
     registro.lista_pessoas.pop(0)
+
+If numero_user_escolha == 3:
+
