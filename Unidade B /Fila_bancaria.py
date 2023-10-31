@@ -1,4 +1,4 @@
-"""
+Oi"""
 Questão: Gerenciamento de Fila de Banco com Prioridade
 
 Você foi designado para criar um programa em Python que simula a gestão de uma fila de banco
@@ -88,4 +88,4 @@ if numero_user_escolha == 1:
 if numero_user_escolha == 2:
 
     print('Proximo cliente.')
-    registro.lista_pessoas.remove(0,nome)
+    registro.lista_pessoas.pop(0)
