@@ -84,3 +84,8 @@ if numero_user_escolha == 1:
         registro.adicionar_fila(nome)
     else:
         print('Digite somente S/N .')
+
+if numero_user_escolha == 2:
+
+    print('Proximo cliente.')
+    registro.lista_pessoas.remove(0,nome)
