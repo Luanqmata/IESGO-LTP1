@@ -23,6 +23,7 @@ Dicas:
 Ao adicionar ou remover animais da lista em Zoologico, lembre-se de usar os métodos da lista, como append ou remove.
 Ao listar os animais, use um loop para iterar sobre todos os animais e chamar o método descricao de cada animal.
 """
+import time
 class Animal:
     def __init__(self, nome, especie, idade, dieta, habitat):
         self.nome = nome
@@ -32,57 +33,83 @@ class Animal:
         self.habitat = habitat
 
     def __str__(self):
-        return f'{self.nome} é um {self.especie}, ele tem {self.idade} anos. Ele é {self.dieta} e seu habitat é {self.habitat}.'
+        return f'    {self.nome.title()} é um {self.especie}, ele tem {self.idade} anos. Ele é {self.dieta} e seu habitat é {self.habitat}.\n\n\n\n\n'
+
 class Zoo: 
     def __init__(self):
         self.lista_animais_nome = []
         self.lista_animais = []
 
-    def adicionar_animal_caracters(self, nome, especie, idade, dieta, habitat):
+    def registro_animal(self, nome, especie, idade, dieta, habitat):
         dados_jutnos = nome, especie, idade, dieta, habitat 
         self.lista_animais.append(dados_jutnos)
+        # print(self.lista_animais)
     
     def adicionar_animal(self,nome):
+        self.lista_animais_nome.append(nome)
+        # print(self.lista_animais_nome)
+        print('\n...Realizando Cadastro...')
+        time.sleep(0.2)
+        print('.')
+        time.sleep(0.2)
+        print('..')
+        time.sleep(0.2)
+        print('...')
+        time.sleep(0.2)
+        print(f'\n\t\t...REGISTRADO COM SUCESSO...')
         
-    
-    # def remover_animal(self, nome):      
-      #  if nome in self.lista_animais:
-       #     self.lista_animais.remove(nome)
-        #    print('Foi removido com sucesso.')
-       # else:
-       #     print('O animal Não foi removido ')    
-    #def listar_animais(self):    
+    def remover_animal(self, nome):      
+        if nome in self.lista_animais_nome:
+            self.lista_animais_nome.remove(nome)
+            print(f'O Animal {nome}, será removido Do Zoologico com Sucesso!')
+        else:
+            print('O animal Não se Encontra no Zoologico.')  
+              
+    #def listar_animais(self):
+       
 zoo = Zoo()     
-        
+print('\n\t@@@@@@@@@@@@@@@@@@@@@@@@@ BEM-VINDO AO ZoO LoGIc @@@@@@@@@@@@@@@@@@@@@@@@@')
 while True:
-    print('Opções:')
-    print('1. Registrar um animal')
-    print('2. EXCLUIR')
+    time.sleep(1)
+    print("\nMenu Numerico de opções:\n")
+    print('\t1. Registro de um novo Animal no Zoologic.')
+    print('\t2. Mandar o Animal de uma DESSA pra MELHOR. "excluir" ')
 
-    user_escolha = int(input('Digite o número da opção desejada: '))
+    user_escolha = int(input('\n-------------------------------------\nDigite o número da opção desejada: '))
     
     if user_escolha == 1:
-        print('Opção 1: Registro de Animal')
+        print('\n\t\tOpção 1: Registro de Animal\n')
         nome_animal = input('Digite o nome do animal: ')
+        time.sleep(0.2)
         idade_animal = int(input('Digite a idade do animal: '))
+        time.sleep(0.2)
         especie_animal = input('Digite a espécie do animal: ')
+        time.sleep(0.2)
         dieta_animal = input('Digite o tipo de dieta deste animal: ')
+        time.sleep(0.2)
         habitat_animal = input('Qual o tipo de habitat que esse animal vive? ')
-
-        zoo.adicionar_animal(nome_animal)
+        time.sleep(0.2)
+        nome_animal_min = nome_animal.lower()
         
-        zoo.adicionar_animal_caracters(nome_animal, especie_animal, idade_animal, dieta_animal, habitat_animal)
+        zoo.adicionar_animal(nome_animal_min)
         
-        animal_info = Animal(nome_animal, especie_animal, idade_animal, dieta_animal, habitat_animal)
-        print(animal_info)
+        zoo.registro_animal(nome_animal_min, especie_animal, idade_animal, dieta_animal, habitat_animal)
         
-        print('\nExitem ',len(zoo.lista_animais),'Animais, Registrados No ZoOlogico.')        
+        animal_info = Animal(nome_animal_min, especie_animal, idade_animal, dieta_animal, habitat_animal)
+        
+        print(animal_info) # MSG DA __STR__
+        
+        #print('\nExitem ',len(zoo.lista_animais_nome),'Animais, Registrados No ZoOlogico.')        
         
     elif user_escolha == 2:
+        print('Opção 2: Remover Animal do ZOO.')
         nome = input('Digite o Nome do Animal para exclui-lo: ')
-        zoo.remover_animal(nome)
+        nome_min = nome.lower()
+        zoo.remover_animal(nome_min)
     
     elif user_escolha ==3:
         print(zoo.lista_animais)
+        print(zoo.lista_animais_nome)
+        
     else:
         print('Opção inválida. Digite 1 para registrar um animal ou 2 para sair.')
