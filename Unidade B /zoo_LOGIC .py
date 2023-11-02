@@ -53,18 +53,29 @@ class Zoo:
             print('\t...O animal Não se Encontra no Zoologico...\n\n\n\n\n')  
               
     def listar_animais(self):
+        print(f'\n\tNo momento Existem {len(self.lista_animais_nome)} Habitates Sendo Ocupados.\t Total de Registros Do Zoo Logic: {len(self.lista_animais)}')
+        
         print('\n\t\t...Opção 3: LISTAR REGISTROS...\n')
         time.sleep(0.4)
-        print('\n\t\t...Listar Animais em Tempo real no Zoo Logic... = 1 \n')
+        print('\n\t\t...Listar Animais em Tempo real no Zoo Logic... DIGITE = 1 \n')
         time.sleep(0.2)
-        print('\n\t\t...Listar Animais que já Foram registrado no Sistema do Zoo Logic... = 2\n')
+        print('\n\t\t...Listar Animais que já Foram registrado no Sistema do Zoo Logic... DIGITE= 2\n')
         
-        print(f'\tNo momento Existem {len(self.lista_animais_nome)} Habitates Sendo Ocupados.\t Total de Registros Do Zoo Logic: {len(self.lista_animais)}')
         
         escolha = int(input('\n\nDigite o Numero Correspondente A lista Que você queira Imprimir: '))
         if escolha == 1:
             print('\nAnimais em TEMPO REAL no ZOOLOGIC:')
             print('\n\t\t',self.lista_animais_nome,'\n\n\n\n\n')
+            
+            if self.lista_animais_nome: # VERIFICAÇÃO SE EXISTE ALGUM ITEM NA LISTA 
+                nome_mai = input('Digite o nome do animal,para Mais informações: ')
+                nome = nome_mai.lower()
+                for animal in self.lista_animais:
+                    if nome in animal:
+                        print('\n',animal)
+                        print('\n\n\n\n\n')
+            else:
+                print('não existe nenhum animal na lista.')
         elif escolha ==2:
             print('\nTodos Animais Que já passaram Pelo O ZOO LOGIC:')
             print('\n\t\t',self.lista_animais,'\n\n\n\n\n')
@@ -72,8 +83,10 @@ class Zoo:
     def listar_animais_em_habitat(self, habitat):
         print(f'\nAnimais no habitat {habitat}:')
         for animal in self.lista_animais:
-            if animal[4] == habitat.lower():
-                print(animal[0])
+            if animal[4] == habitat:
+                print(animal)
+            else:
+                print('\n\t...não existem animais nesse Habitat...')
         print('\n\n\n\n\n')
 
 
@@ -85,8 +98,9 @@ while True:
     print("\nMenu Numerico de opções:\n")
     print('\t1. Registro de um novo Animal no Zoologic.')
     print('\t2. Mandar o Animal de uma DESSA pra MELHOR. "excluir" ')
-    print('\t3. Listar.')
-
+    print('\t3. Listar Animais Em tempo real , e animais registrado no sistema.')
+    print('\t4.Prcurar animais por HABITAT.')
+    
     user_escolha = int(input('\n-------------------------------------\nDigite o número da opção desejada: '))
     
     if user_escolha == 1:
@@ -116,16 +130,34 @@ while True:
         
     elif user_escolha == 2:
         print('\n\t\t...Opção 2: Remover Animal Do zoologico...\n')
-        nome = input('\nDigite o Nome do Animal para exclui-lo: ')
-        nome_min = nome.lower()
-        zoo.remover_animal(nome_min)
-    
+        print('\n\t\t',zoo.lista_animais_nome,'\n\n')
+        if zoo.lista_animais_nome:
+            nome = input('\nDigite o Nome do Animal para exclui-lo: ')
+            nome_min = nome.lower()
+            zoo.remover_animal(nome_min)
+        else:
+            print('...Não existem Animamis Para serem excluidos...\n\t       ...Registre um e tente novamente...')
+            print('\n\n\n\n\n')
+            
     elif user_escolha ==3:
-        zoo.listar_animais()
-    
-    elif user_escolha == 4:
-        habitat = input('Digite o habitat para listar os animais: ')
-        zoo.listar_animais_em_habitat(habitat)
-    
+        if zoo.lista_animais:
+            zoo.listar_animais()
+        else: 
+            print('\n\t...Ainda não existe Nenhum animal registrado no Sistema...\n\t       ...Registre um e tente novamente...')
+            print('\n\n\n\n\n')
+            
+    elif user_escolha == 4:             # falta fazer a logica de só printar os que estão ocupando o habitat em tempo real 
+        if zoo.lista_animais_nome: # checka se tem algum animal em tempo real em algum habitat.
+                #nome_maiusculo = input('     digite o nome do animal: ')
+                #nome = nome_maiusculo.lower()
+                #if nome in zoo.lista_animais_nome:
+            print('\n\tAnimais em Habitats.',zoo.lista_animais_nome,'\n')
+            habitat_mai = input('\n\n    Agora digite o HABITAT: ')
+            habitat = habitat_mai.lower()
+            zoo.listar_animais_em_habitat(habitat)
+                #else:
+                #print('\n\n\tO animal n se encontra nesse Habitat.')
+        else:
+            print('\n\t...Não existem Habitats Ocupados...\n\t       ...Registre um e tente novamente...')
     else:
-        print('Opção inválida. Digite 1 para registrar um animal ou 2 para sair.')
+        print('Opção inválida. Digite um numero dentre as opçoes do MENU.')
